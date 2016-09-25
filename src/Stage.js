@@ -13,6 +13,11 @@ export default class SVG extends React.Component {
                 height="210mm"
                 viewBox="0 0 500 210"
                 {...this.props}>
+
+             <filter id="blur-filter" x="-2" y="-2" width="200" height="200">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+             </filter>
+
              <path
                    d="M173.188 101h178.556l151.605 73.431H-2z"
                    fill="#ac9393" />

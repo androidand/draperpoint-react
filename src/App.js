@@ -4,7 +4,7 @@ var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 
 
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 import Stage from './Stage.js';
@@ -24,11 +24,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Draper Point</h2>
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <h1>Draper Point</h1>
         </div>
         <p className="App-intro">
-          We are looking for a singer.
+          We are a band looking for a singer.
           Listen to our demos and contact us if you want in! 
         </p>
 
@@ -37,7 +37,7 @@ class App extends Component {
          href="#"
          onTouchTap={this.handleTouchTap}
          onClick={this.handleClick}>
-         Tap Me
+         info@draperpoint.net
        </a>
 
        <div>

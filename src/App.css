@@ -24,6 +24,28 @@
   to { transform: rotate(360deg); }
 }
 
+
+h1 {
+    font: 'Verdana';
+    text-shadow: -1px 1px 45px red;
+    font-size: 70px;
+    -webkit-transition: text-shadow 0.2s linear;
+    -moz-transition: text-shadow 0.2s linear;
+    -ms-transition: text-shadow 0.2s linear;
+    -o-transition: text-shadow 0.2s linear;
+    transition: text-shadow 0.2s linear;
+}
+
+h1:hover {
+    font-size: 71px;
+    -webkit-transition: text-shadow 3s ease;
+    -moz-transition: text-shadow 3s ease;
+    -o-transition: text-shadow 3s ease;
+    transition: text-shadow 3s ease;
+}
+
+
+
 #stage {
   display: block;
   margin: auto;
@@ -31,8 +53,19 @@
   padding: 2px;
 }
 
-#stage ellipse:active {
-    width: 70px;
-    height: 74px;
-    fill: white;
+#stage ellipse {
+  fill: grey;
+  fill-opacity:0.2;
 }
+
+#stage ellipse:active {
+}
+
+#stage ellipse:hover {
+    fill: white;
+    fill-opacity:0.6;
+    stroke: yellow;
+    filter: url(#blur-filter);
+}
+
+
