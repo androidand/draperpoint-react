@@ -28,8 +28,10 @@ class App extends Component {
           <h2>Draper Point</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          We are looking for a singer.
+          Listen to our demos and contact us if you want in! 
         </p>
+
 
         <a
          href="#"
