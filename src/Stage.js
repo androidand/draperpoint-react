@@ -27,30 +27,30 @@ export default class SVG extends React.Component {
              <path
                    fill="#472A2A"
                    d="M0 180h500v50H0z" />
-             <ellipse
-                      cx="258.296"
-                      cy="-116.609"
-                      rx="53.663"
-                      ry="7.531"
+             <ellipse id="giovanni"
+                      cx="259"
+                      cy="-90"
+                      rx="80"
+                      ry="30"
                       transform="scale(1 -1)"
                       fill="#917c6f" />
-             <ellipse
+             <ellipse id="enkish"
                       cx="152.793"
                       cy="139.928"
                       rx="47.558"
                       ry="7.336"
                       fill="#917c6f" />
-             <ellipse
-                      cx="378.188"
-                      cy="139.169"
-                      rx="42.752"
-                      ry="6.071"
+             <ellipse id="andreas"
+                      cx="380"
+                      cy="145"
+                      rx="45"
+                      ry="25"
                       fill="#917c6f" />
-             <ellipse
-                      cx="267.388"
-                      cy="158.394"
-                      rx="48.317"
-                      ry="7.083"
+             <ellipse id="you"
+                      cx="270"
+                      cy="160"
+                      rx="60"
+                      ry="35"
                       fill="#917c6f" />
              
 
@@ -64,21 +64,21 @@ export default class SVG extends React.Component {
 
              <text
                    style={ { lineHeight: "125%" } }
-                   x="236.272"
-                   y="149.288"
+                   x="237"
+                   y="155"
                    fontWeight="400"
-                   fontSize="11.289"
+                   fontSize="10"
                    fontFamily="sans-serif"
                    letterSpacing="0"
                    wordSpacing="0">
                <tspan
-                      x="236.272"
-                      y="149.288"
+                      x="220"
+                      y="155"
                       style={ { InkscapeFontSpecification: "'.Beirut PUA Bold'" } }
-                      fontSize="22.578"
+                      fontSize="23"
                       fontFamily=".Beirut PUA"
                       fontWeight="700">
-                 YOU?
+                 Din plats?
                </tspan>
              </text>
            </svg>;
