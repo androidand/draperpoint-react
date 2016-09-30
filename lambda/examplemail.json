@@ -1,0 +1,120 @@
+{
+	"Type": "Notification",
+	"MessageId": "e5d60505-8132-53c7-b0b2-556285c704a5",
+	"TopicArn": "arn:aws:sns:eu-west-1:683739803679:mail",
+	"Subject": "Amazon SES Email Receipt Notification",
+	"Message": {
+	"notificationType": "Received",
+	"mail": {
+		"timestamp": "2016-09-29T12:01:56.807Z",
+		"source": "tantonet@gmail.com",
+		"messageId": "37h0ljc91vus035ka4750nva3nu9erbkurq68mg1",
+		"destination": ["info@draperpoint.net"],
+		"headersTruncated": false,
+		"headers": [{
+			"name": "Return-Path",
+			"value": "<tantonet@gmail.com>"
+		}, {
+			"name": "Received",
+			"value": "from mail-lf0-f43.google.com (mail-lf0-f43.google.com [209.85.215.43]) by inbound-smtp.eu-west-1.amazonaws.com with SMTP id 37h0ljc91vus035ka4750nva3nu9erbkurq68mg1 for info@draperpoint.net; Thu, 29 Sep 2016 12:01:56 +0000 (UTC)"
+		}, {
+			"name": "X-SES-Spam-Verdict",
+			"value": "PASS"
+		}, {
+			"name": "X-SES-Virus-Verdict",
+			"value": "PASS"
+		}, {
+			"name": "Received-SPF",
+			"value": "pass (spfCheck: domain of _spf.google.com designates 209.85.215.43 as permitted sender) client-ip=209.85.215.43; envelope-from=tantonet@gmail.com; helo=mail-lf0-f43.google.com;"
+		}, {
+			"name": "Authentication-Results",
+			"value": "amazonses.com; spf=pass (spfCheck: domain of _spf.google.com designates 209.85.215.43 as permitted sender) client-ip=209.85.215.43; envelope-from=tantonet@gmail.com; helo=mail-lf0-f43.google.com; dkim=pass header.i=@gmail.com;"
+		}, {
+			"name": "Received",
+			"value": "by mail-lf0-f43.google.com with SMTP id t81so10108068lfe.0 for <info@draperpoint.net>; Thu, 29 Sep 2016 05:01:56 -0700 (PDT)"
+		}, {
+			"name": "DKIM-Signature",
+			"value": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=from:content-transfer-encoding:subject:message-id:date:to:mime-version; bh=2EXF02RTcSGpiszMXjpwm5lWInOq70fbwwVORFtpkIo=; b=UPTpszu65ivs/O4XKL0FL2UXbA8QcTvn27E1aEx/yBQFeTxt5oQVnfwQsyQuy0ORiOZFxJuRbbmjNN8Rcb0Zv9YZjmBvwB9d/7F6ywLMCK8CODiNdusjkL1lEyjPy3PP5AGvi77J8uUKgRkGuTIKvG15binddjMgoVCBG3//fIYRIQZoqMWpA8hwFiLqRPihjgodvRRdwb1o9JwAlk2PrxMXBiIIValIOp1g40DfKwvYib7EocJRvcAgD0jGA6KcCg//IGIjONv1oGB/pb6q8P0YQUs8f5fIdLkENvJdpx0zCJKrTDmRDYZ0749kkeUpvYVcfhLBYP4+MTwcQieTjA=="
+		}, {
+			"name": "X-Google-DKIM-Signature",
+			"value": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20130820; h=x-gm-message-state:from:content-transfer-encoding:subject :message-id:date:to:mime-version; bh=2EXF02RTcSGpiszMXjpwm5lWInOq70fbwwVORFtpkIo=; b=JaupvFgE9JjKvmOXIr8c5fVnHYlN9rrpc45CttglSmoDFrJn8Trt1TBKOoHcwknx9a dPxGNNqKOlzdAFFcM/GOC0qGq7qcoNd/Y0Ndz6PgN/auXZjFdQ37VJs7BxkLWfknioCM EVZZ3/djOLtwDcZNZds3wmnz4dTBkp2OZd5ehdjB+Z6/dSiiaWVJrAKhuJW/r5MkeMha RpKNjm21WZsUech0k0vm8kFE8Kd6SEuPvB7ZqYX2pAepxCo97xf0AlCLPzm6l7fgz9Al pBhPobBtRr5HxDqtu5LLuhqUWco4w5SUnlrQgelkb2aU9NdrGMK68+XOukHnqjnoHvOp Iu2A=="
+		}, {
+			"name": "X-Gm-Message-State",
+			"value": "AA6/9Rm+k2M51jRR+7eyiCIaqnSP1EvP81Iq3qa2KltfNyxfRccyTimCJTX7ZaA8SC/JRg=="
+		}, {
+			"name": "X-Received",
+			"value": "by 10.25.24.101 with SMTP id o98mr438636lfi.3.1475150515615; Thu, 29 Sep 2016 05:01:55 -0700 (PDT)"
+		}, {
+			"name": "Return-Path",
+			"value": "<tantonet@gmail.com>"
+		}, {
+			"name": "Received",
+			"value": "from n153-p110.kthopen.kth.se (n153-p110.kthopen.kth.se. [130.229.153.110]) by smtp.gmail.com with ESMTPSA id 5sm2069159ljb.22.2016.09.29.05.01.54 for <info@draperpoint.net> (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128); Thu, 29 Sep 2016 05:01:54 -0700 (PDT)"
+		}, {
+			"name": "From",
+			"value": "Andreas Sylvan <tantonet@gmail.com>"
+		}, {
+			"name": "Content-Type",
+			"value": "text/plain; charset=utf-8"
+		}, {
+			"name": "Content-Transfer-Encoding",
+			"value": "quoted-printable"
+		}, {
+			"name": "Subject",
+			"value": "test!"
+		}, {
+			"name": "Message-Id",
+			"value": "<88E3D695-EE97-448A-97F9-D759D38BC8BA@gmail.com>"
+		}, {
+			"name": "Date",
+			"value": "Thu, 29 Sep 2016 14:01:54 +0200"
+		}, {
+			"name": "To",
+			"value": "info@draperpoint.net"
+		}, {
+			"name": "Mime-Version",
+			"value": "1.0 (Mac OS X Mail 9.3 (3124))"
+		}, {
+			"name": "X-Mailer",
+			"value": "Apple Mail (2.3124)"
+		}],
+		"commonHeaders": {
+			"returnPath": "tantonet@gmail.com",
+			"from": ["Andreas Sylvan <tantonet@gmail.com>"],
+			"date": "Thu, 29 Sep 2016 14:01:54 +0200",
+			"to": ["info@draperpoint.net"],
+			"messageId": "<88E3D695-EE97-448A-97F9-D759D38BC8BA@gmail.com>",
+			"subject": "test!"
+		}
+	},
+	"receipt": {
+		"timestamp": "2016-09-29T12:01:56.807Z",
+		"processingTimeMillis": 501,
+		"recipients": ["info@draperpoint.net"],
+		"spamVerdict": {
+			"status": "PASS"
+		},
+		"virusVerdict": {
+			"status": "PASS"
+		},
+		"spfVerdict": {
+			"status": "PASS"
+		},
+		"dkimVerdict": {
+			"status": "PASS"
+		},
+		"action": {
+			"type": "S3",
+			"topicArn": "arn:aws:sns:eu-west-1:683739803679:mail",
+			"bucketName": "draperpoint-mail",
+			"objectKeyPrefix": "",
+			"objectKey": "37h0ljc91vus035ka4750nva3nu9erbkurq68mg1"
+		}
+	}
+},
+	"Timestamp": "2016-09-29T12:01:57.342Z",
+	"SignatureVersion": "1",
+	"Signature": "jqdcxGYxxypgm0uFkqCYaQtRToduET8p+FBrMtZpjizhCEgCnvYVwyHX8DNFfP4xYiJt0hNZ/Q2MYhR/P42PWifAmrQ71Oicx/xhBqo3BZCHCUgY5YwJZba/ztX8GhV94ilp6O/ea1ERKcaAEuK/rGhIE7MWmL4oxhQaKWQWs+evGzZCC2wJyUBScavHzNzNkN96/mzhZqMp9NOUKOnM78dqJBxkU/6+0H1yI4Y/92gkNbvMd64laDtj2rT0ounRoqq3+Cut2W6i5NXF7U1i+UnNoPMigtJG9/nvAQjpQcrP6QOQCfBR67f0RUOc+UaU/TP5lGlGOrKj7mTBPTaWEg==",
+	"SigningCertURL": "https://sns.eu-west-1.amazonaws.com/SimpleNotificationService-b95095beb82e8f6a046b3aafc7f4149a.pem",
+	"UnsubscribeURL": "https://sns.eu-west-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:eu-west-1:683739803679:mail:b0c23ff4-9fbb-47bc-bfcc-84e181f04ef7"
+}
