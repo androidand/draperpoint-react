@@ -10,6 +10,9 @@ import './App.css';
 import Stage from './Stage.js';
 import Player from './Player.js';
 
+//var Mailto = require('react-mailto');
+import Mailto from 'react-mailto';
+
 class App extends Component {
 
   handleClick(e) {
@@ -28,8 +31,7 @@ class App extends Component {
           <h1>Draper Point</h1>
         </div>
         <p className="App-intro">
-          We are a band looking for a singer.
-          Listen to our demos and contact us if you want in! 
+          Vi är ett band som letar efter en sångare. Det är en fördel om du även är bra på att skriva text och låtar, samt även kan spela något instrument, främst då gitarr eller keyboard. Vi gillar rock, lyssna på våra demos här på sidan så får du en bättre bild av vad vi lirar.
         </p>
 
 
@@ -37,8 +39,11 @@ class App extends Component {
          href="#"
          onTouchTap={this.handleTouchTap}
          onClick={this.handleClick}>
-         info@draperpoint.net
        </a>
+
+       <Mailto email="info@draperpoint.net" obfuscate={true} headers={{subject: 'Sångare i Draper Point',body: 'Hej'}}>
+        Maila oss!
+      </Mailto>
 
        <div>
         <Stage />
