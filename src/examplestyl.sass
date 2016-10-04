@@ -1,0 +1,31 @@
+// SASS style sheet */
+// Palette color codes */
+// Palette URL: http://paletton.com/#uid=a003x0kLHgzKnneKmjUO8cTRj8K */
+
+$color-primary-0: #840000;	// Main Primary color */
+$color-primary-1: #B90000;
+$color-primary-2: #9F0000;
+$color-primary-3: #670000;
+$color-primary-4: #460000;
+
+$color-complement-0: #033155;	// Main Complement color */
+$color-complement-1: #044577;
+$color-complement-2: #033B66;
+$color-complement-3: #022642;
+$color-complement-4: #011A2D;
+
+
+// http://www.zingdesign.com/the-sass-and-compass-tutorial-for-absolute-beginners/
+
+// http://hugogiraudel.com/2015/06/18/styling-react-components-in-sass/
+
+// https://sass-guidelin.es/?utm_source=CSS-Weekly&utm_campaign=Issue-145&utm_medium=RSS#architecture
+
+nav {
+  a{
+    color: $color-primary-0;
+    &:hover {
+      color: darken($color-primary-0, 10%);
+    }
+  }
+}

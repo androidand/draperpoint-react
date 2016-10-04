@@ -1,6 +1,7 @@
 import React from "react";
 import Giovanni from './Giovanni.js';
 import Andreas from './Andreas.js';
+import Enkish from './Enkish.js';
 
 export default class SVG extends React.Component {
 
@@ -17,49 +18,60 @@ export default class SVG extends React.Component {
                 viewBox="0 0 500 200"
                 {...this.props}>
 
-             <filter id="blur-filter" x="-2" y="-2" width="200" height="200">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
-             </filter>
+            <filter id="blur-filter" x="-2" y="-2" width="200" height="200">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            </filter>
 
-             <path
-                   d="M174 50h180l150 130H-2z"
-                   fill="#633C3C" />
-             <path
-                   fill="#472A2A"
-                   d="M0 180h500v50H0z" />
-             <ellipse id="giovanni"
-                      cx="259"
-                      cy="-90"
+            <path
+                  d="M174 50h180l150 130H-2z"
+                  fill="#633C3C" />
+            <path
+                  fill="#472A2A"
+                  d="M0 180h500v50H0z" />
+
+            <ellipse 
+                      id="giovanni"
+                      cx="265"
+                      cy="85"
                       rx="80"
                       ry="30"
-                      transform="scale(1 -1)"
                       fill="#917c6f" />
-             <ellipse id="enkish"
-                      cx="152.793"
-                      cy="139.928"
-                      rx="47.558"
-                      ry="7.336"
+
+            <ellipse 
+                      id="enkish"
+                      cx="145"
+                      cy="144"
+                      rx="45"
+                      ry="25"
                       fill="#917c6f" />
-             <ellipse id="andreas"
+
+            <ellipse 
+                      id="andreas"
                       cx="380"
                       cy="145"
                       rx="45"
                       ry="25"
                       fill="#917c6f" />
-             <ellipse id="you"
-                      cx="270"
+
+            <ellipse 
+                      id="you"
+                      cx="265"
                       cy="160"
                       rx="60"
                       ry="35"
                       fill="#917c6f" />
              
 
-             <g transform="translate(180,-25) rotate(0) scale(0.04)">
-              <Giovanni />
+             <g transform="translate(180,-30) rotate(0) scale(0.04)">
+                 <Giovanni />
              </g>
 
              <g transform="translate(240,-40) rotate(0) scale(0.05)">
-              <Andreas />
+                  <Andreas />
+             </g>
+
+             <g transform="translate(100,-10) rotate(0) scale(0.05)">
+                  <Enkish />
              </g>
 
              <text

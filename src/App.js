@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-//import ReactDOM from 'react-dom'; //imports in index.js
-var injectTapEventPlugin = require("react-tap-event-plugin");
-injectTapEventPlugin();
-
-
-//import logo from './logo.svg';
+// this will be used to add the views
+import { AppRegistry, View } from 'react-native';
 import './App.css';
 
 import Stage from './Stage.js';
 import Player from './Player.js';
 
-//var Mailto = require('react-mailto');
 import Mailto from 'react-mailto';
+
+var injectTapEventPlugin = require("react-tap-event-plugin");
+injectTapEventPlugin();
+
 
 class App extends Component {
 
@@ -25,6 +24,13 @@ class App extends Component {
 
   render() {
     return (
+      <View style={{
+            flex: 1,
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            }}>
+
       <div className="App">
         <div className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
@@ -45,15 +51,29 @@ class App extends Component {
         Maila oss!
       </Mailto>
 
+
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+
+
        <div>
         <Stage />
        </div>
+
+
+
+
 
        <div>
         <Player />
        </div>
 
+
+
+
       </div>
+      </View>
     );
   }
 }
