@@ -2,6 +2,7 @@ import React from "react";
 import Giovanni from './Giovanni.js';
 import Andreas from './Andreas.js';
 import Enkish from './Enkish.js';
+import Shure from './Shure.js';
 
 export default class SVG extends React.Component {
 
@@ -61,9 +62,10 @@ export default class SVG extends React.Component {
                       ry="35"
                       fill="#917c6f" />
              
-
+             <g id="giovanni">
              <g transform="translate(180,-30) rotate(0) scale(0.04)">
                  <Giovanni />
+             </g>
              </g>
 
              <g transform="translate(240,-40) rotate(0) scale(0.05)">
@@ -72,6 +74,12 @@ export default class SVG extends React.Component {
 
              <g transform="translate(100,-10) rotate(0) scale(0.05)">
                   <Enkish />
+             </g>
+
+             <g id="shure">
+             <g transform="translate(250,125) rotate(0) scale(0.02)">
+                  <Shure />
+             </g>
              </g>
 
              <text
@@ -85,12 +93,12 @@ export default class SVG extends React.Component {
                    wordSpacing="0">
                <tspan
                       x="220"
-                      y="155"
-                      style={ { InkscapeFontSpecification: "'.Beirut PUA Bold'" } }
-                      fontSize="23"
+                      y="170"
+                      style={ { InkscapeFontSpecification: "'.Beirut PUA'" } }
+                      fontSize="10"
                       fontFamily=".Beirut PUA"
                       fontWeight="700">
-                 Din plats?
+                 Din plats? Maila oss!
                </tspan>
              </text>
            </svg>;

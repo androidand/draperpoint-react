@@ -1,3 +1,8 @@
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
 .App {
   text-align: center;
   background: linear-gradient(to bottom,white 0%,#242943 80%,#000000 50%,#242943 50%,black 100%); /* W3C */
@@ -45,12 +50,13 @@ h1:hover {
 }
 
 
-
 #stage {
-  display: block;
-  margin: auto;
+  flex:3;
+  display: flex;
+  margin: 0px;
   width: 100%;
-  padding: 2px;
+  height:100%;
+  padding-top: 5%;
 }
 
 #stage ellipse {
@@ -94,4 +100,37 @@ h1:hover {
       100% {fill: red;}
     }
 
+#stage #shure {
+  animation: shure-spin infinite 3s linear;
+}
 
+#stage #shure:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shure-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(0.5deg); }
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

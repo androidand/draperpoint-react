@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// this will be used to add the views
-import { AppRegistry, View } from 'react-native';
+// this will be used to add the views. We dont need this...
+//import { AppRegistry, View } from 'react-native';
 import './App.css';
 
 import Stage from './Stage.js';
@@ -24,45 +24,34 @@ class App extends Component {
 
   render() {
     return (
-      <View style={{
-            flex: 1,
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            }}>
 
-      <div className="App">
+
+      <div className="App container">
+
         <div className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1>Draper Point</h1>
+          <h1 id="App-header-text">Draper Point</h1>
         </div>
-        <p className="App-intro">
+
+        <div className="App-intro">
+        <p id="App-intro-text">
           Vi är ett band som letar efter en sångare. Det är en fördel om du även är bra på att skriva text och låtar, samt även kan spela något instrument, främst då gitarr eller keyboard. Vi gillar rock, lyssna på våra demos här på sidan så får du en bättre bild av vad vi lirar.
         </p>
+        </div>
 
-
-        <a
+      <a
          href="#"
          onTouchTap={this.handleTouchTap}
          onClick={this.handleClick}>
-       </a>
+      </a>
 
        <Mailto email="info@draperpoint.net" obfuscate={true} headers={{subject: 'Sångare i Draper Point',body: 'Hej'}}>
         Maila oss!
       </Mailto>
 
 
-        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
-
-
-       <div>
+       <div id="Stage-container">
         <Stage />
        </div>
-
-
-
 
 
        <div>
@@ -73,7 +62,6 @@ class App extends Component {
 
 
       </div>
-      </View>
     );
   }
 }
