@@ -68,7 +68,7 @@ export default class SVG extends React.Component {
              </g>
              </g>
 
-             <g transform="translate(240,-40) rotate(0) scale(0.05)">
+             <g transform="translate(240,-50) rotate(0) scale(0.054)">
                   <Andreas />
              </g>
 

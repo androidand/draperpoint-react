@@ -49,7 +49,7 @@ class App extends Component {
       </Mailto>
 
 
-       <div id="Stage-container">
+       <div id="Stage-container" className="container">
         <Stage />
        </div>
 
