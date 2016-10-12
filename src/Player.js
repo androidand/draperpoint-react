@@ -53,6 +53,7 @@ handleOnPlay () {
   this.setState({
     playing: true
   })
+  this.renderSeekPos();
 }
 
 handleOnEnd () {
@@ -71,7 +72,6 @@ handleOnEnd () {
     this.setState({
       current: this.files[0]
     })
-    
   }
 
   handleOnNext () {
@@ -113,6 +113,17 @@ clearRAF () {
   raf.cancel(this._raf)
 }
 
+
+timeFormat (totalSeconds) {
+ totalSeconds %= 3600;
+ let minutes = Math.floor(totalSeconds / 60);
+ let seconds = totalSeconds % 60;
+ return this.pad(minutes.toFixed(0))+":"+this.pad(seconds.toFixed(0));
+}
+
+pad(n) {
+    return (n < 10) ? ("0" + n) : n;
+}
 
   
 getMethods(obj)
@@ -170,9 +181,9 @@ getMethods(obj)
      
         <p>
           {'Status: '}
-          {(this.state.seek !== undefined) ? this.state.seek.toFixed(2) : 'NaN'}
+          {(this.state.seek !== undefined) ? this.timeFormat(this.state.seek) : '-'}
           {' / '}
-          {(this.state.duration) ? this.state.duration.toFixed(2) : 'NaN'}
+          {(this.state.duration) ? this.timeFormat(this.state.duration) : '-'}
 
         </p>
 
