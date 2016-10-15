@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Yl from 'react-howler';
+import Song from 'react-howler';
 import raf from 'raf'; // requestAnimationFrame polyfill
 
 class Player extends Component {
@@ -8,8 +8,9 @@ class Player extends Component {
     super(props)
 
         this.files = [
-        'https://s3-eu-west-1.amazonaws.com/thanksforthe-media/160807+You+Want+Me+To+Go+Let+It+Go+Jam.mp3',
-        'https://s3-eu-west-1.amazonaws.com/thanksforthe-media/Rock+It+tonight....m4a'
+        {"url":"https://s3-eu-west-1.amazonaws.com/thanksforthe-media/160807+You+Want+Me+To+Go+Let+It+Go+Jam.mp3","name":"You want me to go (Demo)"},
+        {"url":"https://s3-eu-west-1.amazonaws.com/thanksforthe-media/Rock+It+tonight....m4a","name":"Rock it tonight (Demo)"},
+        {"url":"https://s3-eu-west-1.amazonaws.com/thanksforthe-media/Rock+It+tonight....m4a","name":"Another song (Demo)"}
         ];
 
     this.state = {
@@ -66,26 +67,30 @@ handleOnEnd () {
 
 
   handleOnPrev () {
-    console.log("Length: " +  this.files.length);
-    console.log("Index: " + this.files.indexOf(this.state.current));
-    
+    let change = (this.files.indexOf(this.state.current) - 1);
+
+  if (change > 0) {
     this.setState({
-      current: this.files[0]
-    })
+       current: this.files[change]
+     })
   }
+  else {
+   console.log("First song.");
+  }  
+}
 
   handleOnNext () {
-    console.log("Length: " +  this.files.length);
-    console.log("Index: " + this.files.indexOf(this.state.current));
-    
-    this.setState({
-      current: this.files[1]
-    })
-    
+    let change = (this.files.indexOf(this.state.current) + 1);
+
+  if (change < this.files.length) {
+   this.setState({
+        current: this.files[change]
+      })
   }
-
-
-
+  else {
+   console.log("Last song.");
+  }
+}
 
 
 handleLoopToggle () {
@@ -152,8 +157,8 @@ getMethods(obj)
 
 
 
-  	  <Yl
-        src={this.state.current}
+  	  <Song
+        src={this.state.current["url"]}
         playing={this.state.playing}
         onLoad={this.handleOnLoad}
         onPlay={this.handleOnPlay}
@@ -178,9 +183,9 @@ getMethods(obj)
       </button>
 
       <p>{(this.state.loaded) ? 'Loaded' : 'Loading'}</p>
+      <p>{this.state.current["name"]}</p>
      
         <p>
-          {'Status: '}
           {(this.state.seek !== undefined) ? this.timeFormat(this.state.seek) : '-'}
           {' / '}
           {(this.state.duration) ? this.timeFormat(this.state.duration) : '-'}
