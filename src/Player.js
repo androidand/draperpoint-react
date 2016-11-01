@@ -69,7 +69,7 @@ handleOnEnd () {
   handleOnPrev () {
     let change = (this.files.indexOf(this.state.current) - 1);
 
-  if (change > 0) {
+  if (change >= 0) {
     this.setState({
        current: this.files[change]
      })
