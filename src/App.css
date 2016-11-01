@@ -1,6 +1,7 @@
 #container {
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App {
@@ -11,35 +12,21 @@
     #242943 70%,
     #000000 50%,
     #242943 50%,
-    grey   100%
+    #222   100%
     ); /* W3C */
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 30s linear;
-  height: 80px;
-}
-
 .App-header {
-  background-color: #222;
+  font-family: 'Rock Salt', cursive;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: black;
 }
-
 .App-intro {
   font-size: large;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-
 h1 {
-    font: 'Verdana';
-    text-shadow: -1px 1px 45px red;
+    font-family: 'Rock Salt', cursive;
+    text-shadow: -1px 1px 45px #ffd344;
     font-size: 70px;
     -webkit-transition: text-shadow 0.2s linear;
     -moz-transition: text-shadow 0.2s linear;
@@ -47,16 +34,13 @@ h1 {
     -o-transition: text-shadow 0.2s linear;
     transition: text-shadow 0.2s linear;
 }
-
 h1:hover {
-    font-size: 71px;
+    text-shadow: -1px 1px 50px white;
     -webkit-transition: text-shadow 3s ease;
     -moz-transition: text-shadow 3s ease;
     -o-transition: text-shadow 3s ease;
     transition: text-shadow 3s ease;
 }
-
-
 #stage {
   flex:3;
   display: flex;
@@ -65,22 +49,18 @@ h1:hover {
   height:100%;
   padding-top: 5%;
 }
-
 #stage ellipse {
   fill: grey;
   fill-opacity:0.2;
 }
-
 #stage ellipse:active {
 }
-
 #stage ellipse:hover {
     fill: white;
     fill-opacity:0.6;
     stroke: yellow;
     filter: url(#blur-filter);
 }
-
     #stage #you {
       animation: colorchange 5s; /* animation-name followed by duration in seconds*/
       -webkit-animation: colorchange 5s; /* Chrome and Safari */
@@ -140,4 +120,9 @@ h1:hover {
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+
+.controlPanel {
+  font-family: 'Condiment', cursive;
+  color: red;
 }

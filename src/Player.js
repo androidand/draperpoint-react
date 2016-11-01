@@ -170,6 +170,8 @@ getMethods(obj)
 
   	 <div id="controlPanel">
 
+     <p className="material-icon">play</p>
+
      <button onClick={this.handleOnPrev}>
       {(this.state.playing) ? 'Prev' : 'Prev!'}
      </button>

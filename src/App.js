@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 // this will be used to add the views. We dont need this...
 //import { AppRegistry, View } from 'react-native';
 import './App.css';
@@ -24,13 +25,9 @@ class App extends Component {
 
   render() {
     return (
-
+ 
 
       <div className="App container">
-
-        <div className="App-header">
-          <h1 id="App-header-text">Draper Point</h1>
-        </div>
 
         <div className="App-intro">
         <p id="App-intro-text">
@@ -44,10 +41,9 @@ class App extends Component {
          onClick={this.handleClick}>
       </a>
 
-       <Mailto email="info@draperpoint.net" obfuscate={true} headers={{subject: 'Sångare i Draper Point',body: 'Hej'}}>
-        Maila oss!
+      <Mailto email="info@draperpoint.net" obfuscate={true} headers={{subject: 'Sångare i Draper Point',body: 'Hej'}}>
+        <i className="material-icons">email</i> Maila oss!
       </Mailto>
-
 
        <div id="Stage-container" className="container">
         <Stage />
